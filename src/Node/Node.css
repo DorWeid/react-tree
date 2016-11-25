@@ -1,0 +1,21 @@
+.Node {
+    position: relative;
+}
+
+.Node-text {
+}
+
+.Node-svg {
+    animation: Node-svg-spin infinite 20s linear;
+}
+
+@keyframes Node-svg-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes Node-svg-spin-none {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(0deg); }
+}
+
