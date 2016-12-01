@@ -17,13 +17,7 @@
   color: white;
 }
 
-.test {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-}
-
-.test1 {
+.App-row {
     display: flex;
     flex-direction: row;
     align-self: center;

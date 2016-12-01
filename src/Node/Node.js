@@ -56,20 +56,20 @@ export default class Node extends React.Component {
   componentDidMount() {
     // this.shouldAnimate = this.animate(()=> {this.tweenLoop()});
 
-    Object.keys(paths).map(ref => {
-      this[ref] = ReactDOM.findDOMNode(this.refs[ref]);
-    });
+    // Object.keys(paths).map(ref => {
+    //   this[ref] = ReactDOM.findDOMNode(this.refs[ref]);
+    // });
   }
 
 
   render() {
-    const {nodeKey, data, onDrag, size, isDirty} = this.props;
+    const {nodeKey, data, onDrag, size, isDirty, transform} = this.props;
     // const transforms = this.getTransforms();
 
     const strokeColor = isDirty ? DIRTY_COLOR : DEFAULT_COLOR;
-
+    console.log(transform)
     return (
-      <Draggable onDrag={(e,data) => onDrag(e, data, nodeKey)}>
+      <Draggable onDrag={(e,data) => onDrag(nodeKey)}>
         <div className="Node">
           <MtSvgLines animate duration={1000}>
             <svg width={size} height={size} viewBox="45 45 300 300"  className="Node-text">
